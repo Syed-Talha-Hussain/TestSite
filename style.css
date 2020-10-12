@@ -3,51 +3,69 @@
 }
 body{
     font-family: 'Sansita Swashed', cursive;
+    background: #fff8ee;
 }
 
 /* Navbar */
 
 .navbar{
-    /* width: 100%; */
     height: 70px;
     display: flex;
-    /* margin: 0px auto; */
     align-items: center;
     box-sizing: border-box;
-    /* max-width: 1200px; */
     padding: 0px 24px;
 }
 
-.nav-bar-inside{
+.navbar{
+    box-sizing: border-box;
+    margin: 0px auto;
+    max-width: 1200px;
+    padding: 0px 24px;
+    width: 100%;
+}
+
+.navbar-inside{
     align-items: center;
     display: flex;
-    justify-content: space-between;
     height: 72px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .logo-img{
     align-items: center;
     display: flex;
     justify-content: center;
-    /* margin: 0 30px; */
+    margin: 0px;
+    margin-left: 5px;
     min-height: 44px;
     min-width: 44px;
     padding: 0px;
     text-decoration: none;
-    height: 32px;
-    margin-top: 10px;
 }
+
+@media (max-width: 400px){
+.logo-img{ 
+    width: auto;
+}
+.logo-txt-1{
+    display: none;
+}}
 
 .logo-txt-1 {
     color: rgb(91, 57, 38);
     font-family: "Reem Kufi", sans-serif;
+    font-family: "Noto Sans",sans-serif;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 0.03em;
+    margin-left: 8px;
+    cursor: pointer;
 }
 
 .logo-txt-2 {
-    font-family: 'Roboto', sans-serif;
     font-family: 'Satisfy', cursive;
 }
 
@@ -55,6 +73,7 @@ body{
     align-items: center;
     display: flex;
     height: 72px;
+
 }
 
 nav{
@@ -64,14 +83,13 @@ nav{
 }
 
 nav > a{
-    font-family: 'Sansita Swashed', cursive;
+    font-family: "Noto Sans",sans-serif;
     color: rgb(170, 149, 133);
     font-weight: 700;
     padding-left: 16px;
     padding-right: 16px;
     text-decoration: none;
     display: flex;
-    /* flex-direction: row; */
 }
 
 nav > a:hover{
@@ -79,9 +97,19 @@ nav > a:hover{
     font-weight: bolder;
 }
 
-.btn{
-    color: "#d16c00";
-    font-size: 14px ;
+a.active {
+    color: rgb(209, 108, 0);
+}
+
+@media (max-width: 400px){
+.a {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+}
+
+.nav-btn{
+    -webkit-box-align: center;
     align-items: center;
     background-color: rgb(240, 233, 231);
     border: 0px;
@@ -90,19 +118,17 @@ nav > a:hover{
     color: rgb(209, 108, 0);
     cursor: pointer;
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     height: 36px;
+    -webkit-box-pack: center;
     justify-content: center;
     outline: none;
     padding-left: 16px;
     padding-right: 16px;
-    transition-duration: 0.1s;
-    margin: 20px auto;
-
 }
 
-.btn:hover{
+.nav-btn:hover {
     background-color: whitesmoke;
 }
 
@@ -116,16 +142,15 @@ nav > a:hover{
 /* Body */
 
 .body-content {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: calc(100vh - 144px);
 }
 
 .body-content-box{
     box-sizing: border-box;
     margin: 0px auto;
-    max-width: 600px;
     padding: 0px 24px;
     width: 100%;
 }
@@ -138,6 +163,7 @@ nav > a:hover{
     padding-bottom: 48px;
     padding-top: 48px;
     margin: 0px auto;
+    max-width: 500px;
 }
 
 .body-content-box-inside-img{
@@ -160,6 +186,7 @@ nav > a:hover{
 }
 
 .body-content-box-inside-para{
+    font-family: "Noto Sans",sans-serif;
     color: rgb(170, 149, 133);
     font-size: 18px;
     font-weight: 400;
@@ -169,6 +196,7 @@ nav > a:hover{
 }
 
 .menu-box{
+    font-family: "Noto Sans",sans-serif;
     box-sizing: border-box;
     margin: 0px auto;
     max-width: 800px;
@@ -242,12 +270,38 @@ nav > a:hover{
 }
 
 .Tip{
-    color: rgb(128, 94, 73);
+    font-family: "Noto Sans",sans-serif;
+    color: rgb(228, 94, 73);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0px;
     padding: 0px;
     text-align: center;
+}
+
+.body-btn{
+    align-items: center;
+    background-color: rgb(240, 233, 231);
+    border: 0px;
+    border-radius: 12px;
+    box-shadow: rgb(226, 214, 207) 6px 6px 12px, rgb(247, 244, 242) -12px -12px 24px -2px;
+    color: rgb(128, 94, 73);
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    height: 56px;
+    justify-content: center;
+    outline: none;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+    text-decoration: none;
+    transition-duration: 00.1s;
+}
+
+.body-btn:hover{
+    background-color: whitesmoke;
 }
 
 /* Footer */
